@@ -2,7 +2,7 @@ CREATE DATABASE ShopsDB
 ON							  
 (
 	NAME = 'ShopsDB',            
-	FILENAME = 'C:\Users\Администратор\Pictures\ShopsDB.mdf', 
+	FILENAME = 'C:\Users\ГЂГ¤Г¬ГЁГ­ГЁГ±ГІГ°Г ГІГ®Г°\Pictures\ShopsDB.mdf', 
 	SIZE = 10MB,                    
 	MAXSIZE = 100MB,				
 	FILEGROWTH = 10MB				
@@ -10,7 +10,7 @@ ON
 LOG ON						  
 ( 
 	NAME = 'LogShopsDB',            
-	FILENAME = 'C:\Users\Администратор\Pictures\LogShopsDB.ldf', 
+	FILENAME = 'C:\Users\ГЂГ¤Г¬ГЁГ­ГЁГ±ГІГ°Г ГІГ®Г°\Pictures\LogShopsDB.ldf', 
 	SIZE = 5MB,                        
 	MAXSIZE = 50MB,                    
 	FILEGROWTH = 5MB                   
@@ -58,9 +58,9 @@ CREATE TABLE Orders
 ( 
 	OrderID int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	CustomerNo int NOT NULL 
-		FOREIGN KEY REFERENCES Customer(CustomerNo),  -- связь с Customer
+		FOREIGN KEY REFERENCES Customer(CustomerNo),
 	EmployeeID int NOT NULL 
-		FOREIGN KEY REFERENCES Employees(EmployeedID), -- ДОБАВЛЕНА связь с Employees
+		FOREIGN KEY REFERENCES Employees(EmployeedID),
 	OrderDate date NOT NULL,
 	Goods varchar(30) NOT NULL 
 );
@@ -68,4 +68,5 @@ GO
 
 SELECT * FROM Employees;
 SELECT * FROM Customer;
+
 SELECT * FROM Orders;
